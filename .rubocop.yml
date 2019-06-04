@@ -1,0 +1,27 @@
+Lint/MixinUsage:
+  Exclude:
+    - 'bin/*'
+
+Bundler/OrderedGems:
+  Exclude:
+    - 'Gemfile'
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 30
+  Exclude:
+    - 'spec/**/*'
+
+AllCops:
+  TargetRubyVersion: 2.6.2
+  DisplayCopNames: true
+  Exclude:
+    - 'db/**/*'
