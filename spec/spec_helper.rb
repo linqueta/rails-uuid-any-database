@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'database_cleaner'
+require 'shoulda-matchers'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -17,7 +18,11 @@ RSpec.configure do |config|
     DatabaseCleaner.start
     DatabaseCleaner.strategy = :transaction
   end
+
   config.after(:each) do
     DatabaseCleaner.clean
   end
+
+  config.include(Shoulda::Matchers::ActiveModel, type: :model)
+  config.include(Shoulda::Matchers::ActiveRecord, type: :model)
 end

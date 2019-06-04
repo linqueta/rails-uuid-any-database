@@ -16,11 +16,13 @@ group :development, :test do
   gem 'pry', '~> 0.12.2'
   gem 'rubocop', require: false
   gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'database_cleaner'
+  gem 'shoulda-matchers'
 end
 
 group :development do
